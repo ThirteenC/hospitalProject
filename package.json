@@ -9,9 +9,6 @@
     "build:staging": "rimraf dist && cross-env vite build --mode staging",
     "report": "rimraf dist && cross-env vite build",
     "vis": "set vis=true && vite build",
-    "lint-fix": "eslint --fix --ext .js,.ts,.jsx,.tsx,.vue src",
-    "lint-prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint": "npm run lint-prettier && npm run lint-fix",
     "preview": "vite preview",
     "prepare": "husky install"
   },

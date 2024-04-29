@@ -2,20 +2,17 @@
   <div class="section-container login-container un-select">
     <div class="body fix-width">
       <div class="top">
-        <div class="top-title">账号密码登录</div>
+        <div class="top-title">{{ $t('system.loginTitle') }}</div>
       </div>
       <div class="main">
         <login-pwd />
-        <div class="foot-link clearFix" />
+        <p class="tips">{{ $t('system.loginTips') }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onBeforeMount, onMounted, onUnmounted } from 'vue'
-import { debounce } from 'lodash-unified'
-
 import LoginPwd from './loginPwd.vue'
 
 defineOptions({
@@ -27,48 +24,31 @@ defineOptions({
 .login-container {
   width: 100%;
   min-height: 100vh;
-  padding: 15vh 0 100px;
+  padding: 22vh 0 100px;
   box-sizing: border-box;
   position: relative;
   background: #fff;
 }
+
 .body {
-  padding: 30px 40px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  border: 1px solid #e6ebf5;
-  background-color: #fff;
-  vertical-align: middle;
-  min-width: 260px;
   width: 380px;
   margin: 0 auto;
 }
 
 .top-title {
   color: rgba(16, 16, 16, 1);
-  font-size: 20px;
-  height: 29px;
-  line-height: 29px;
+  font-size: 24px;
   text-align: center;
 }
+
 .main {
-  margin-top: 20px;
-  .foot-link {
-    text-align: center;
-    margin-top: 1px;
-    .link-item {
-      margin: 0;
-      font-size: 12px;
-      line-height: 18px;
-      color: #1890ff;
-    }
-  }
+  margin-top: 30px;
 }
 
-.foot-link {
-  .el-button {
-    font-size: 12px;
-  }
+.tips {
+  margin-top: 30px;
+  text-align: center;
+  color: #777;
 }
 
 // 适配移动端

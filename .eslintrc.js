@@ -2,108 +2,108 @@
 // 高低版本兼容不同版本eslint 一键格式化
 
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-    // 'vue/setup-compiler-macros': true,
+  // root: true,
+  // env: {
+  //   browser: true,
+  //   es2021: true,
+  //   node: true,
+  //   // 'vue/setup-compiler-macros': true,
     
-    // // 常用
-    // browser: true,             // 浏览器全局变量
-    // node: true,                // Node.js 全局变量和 Node.js 作用域
-    // commonjs: true,            // CommonJS 全局变量和 CommonJS 作用域 (启用此环境用于使用 Browserify/WebPack 的 browser-only 代码)
-    // 'shared-node-browser': true, // Node.js 和 Browser 通用的全局变量
-    // es6: true,                 // 启用除 modules 以外的所有 ECMAScript 6 特性  (这会自动将 `ecmaVersion` 解析器选项设置为 6)
-    // es2017: true,              // 添加所有 ECMAScript 2017 的全局变量并且自动设置 `ecmaVersion` 解析器选项设置为 8
-    // es2020: true,              // 添加所有 ECMAScript 2020 的全局变量并且自动设置 `ecmaVersion` 解析器选项设置为 11
-    // es2021: true,              // 添加所有 ECMAScript 2021 的全局变量并且自动设置 `ecmaVersion` 解析器选项设置为 12
-    // worker: true,              // web workers 全局变量
-    //
-    // // 不常用
-    // amd: true,                 // 根据 amd 规范定义 `require()` 和 `define()` 作为全局变量
-    // mocha: true,               // 添加所有 Mocha 测试全局变量
-    // jasmine: true,             // 为版本 1.3 和 2.0 添加所有 Jasmine 测试全局变量
-    // jest: true,                // Jest 全局变量
-    // phantomjs: true,           // PhantomJS 全局变量
-    // protractor: true,          // Protractor 全局变量
-    // qunit: true,               // QUnit 全局变量
-    // jquery: true,              // jQuery 全局变量
-    // greasemonkey: true,        // GreaseMonkey 全局变量
-    // prototypejs: true,         // Prototype.js 全局变量
-    // shelljs: true,             // ShellJS 全局变量
-    // meteor: true,              // Meteor 全局变量
-    // mongo: true,               // MongoDB 全局变量
-    // applescript: true,         // AppleScript 全局变量
-    // nashorn: true,             // Java 8 Nashorn 全局变量
-    // serviceworker: true,       // Service Worker 全局变量
-    // atomtest: true,            // Atom 测试助手全局变量
-    // embertest: true,           // Ember 测试助手全局变量
-    // webextensions: true,       // WebExtensions 全局变量
+  //   // // 常用
+  //   // browser: true,             // 浏览器全局变量
+  //   // node: true,                // Node.js 全局变量和 Node.js 作用域
+  //   // commonjs: true,            // CommonJS 全局变量和 CommonJS 作用域 (启用此环境用于使用 Browserify/WebPack 的 browser-only 代码)
+  //   // 'shared-node-browser': true, // Node.js 和 Browser 通用的全局变量
+  //   // es6: true,                 // 启用除 modules 以外的所有 ECMAScript 6 特性  (这会自动将 `ecmaVersion` 解析器选项设置为 6)
+  //   // es2017: true,              // 添加所有 ECMAScript 2017 的全局变量并且自动设置 `ecmaVersion` 解析器选项设置为 8
+  //   // es2020: true,              // 添加所有 ECMAScript 2020 的全局变量并且自动设置 `ecmaVersion` 解析器选项设置为 11
+  //   // es2021: true,              // 添加所有 ECMAScript 2021 的全局变量并且自动设置 `ecmaVersion` 解析器选项设置为 12
+  //   // worker: true,              // web workers 全局变量
+  //   //
+  //   // // 不常用
+  //   // amd: true,                 // 根据 amd 规范定义 `require()` 和 `define()` 作为全局变量
+  //   // mocha: true,               // 添加所有 Mocha 测试全局变量
+  //   // jasmine: true,             // 为版本 1.3 和 2.0 添加所有 Jasmine 测试全局变量
+  //   // jest: true,                // Jest 全局变量
+  //   // phantomjs: true,           // PhantomJS 全局变量
+  //   // protractor: true,          // Protractor 全局变量
+  //   // qunit: true,               // QUnit 全局变量
+  //   // jquery: true,              // jQuery 全局变量
+  //   // greasemonkey: true,        // GreaseMonkey 全局变量
+  //   // prototypejs: true,         // Prototype.js 全局变量
+  //   // shelljs: true,             // ShellJS 全局变量
+  //   // meteor: true,              // Meteor 全局变量
+  //   // mongo: true,               // MongoDB 全局变量
+  //   // applescript: true,         // AppleScript 全局变量
+  //   // nashorn: true,             // Java 8 Nashorn 全局变量
+  //   // serviceworker: true,       // Service Worker 全局变量
+  //   // atomtest: true,            // Atom 测试助手全局变量
+  //   // embertest: true,           // Ember 测试助手全局变量
+  //   // webextensions: true,       // WebExtensions 全局变量
     
-  },
-  globals: {
-    $: "readonly",
-    $$: "readonly",
-    $ref: "readonly",
-    $shallowRef: "readonly",
-    $computed: "readonly",
-    Fn: "readonly",
-    PromiseFn: "readonly",
-    RefType: "readonly",
-    LabelValueOptions: "readonly",
-    EmitType: "readonly",
-    TargetContext: "readonly",
-    ComponentElRef: "readonly",
-    ComponentRef: "readonly",
-    ElRef: "readonly",
-    global: "readonly",
-    ForDataType: "readonly",
-    ComponentRoutes: "readonly",
+  // },
+  // globals: {
+  //   $: "readonly",
+  //   $$: "readonly",
+  //   $ref: "readonly",
+  //   $shallowRef: "readonly",
+  //   $computed: "readonly",
+  //   Fn: "readonly",
+  //   PromiseFn: "readonly",
+  //   RefType: "readonly",
+  //   LabelValueOptions: "readonly",
+  //   EmitType: "readonly",
+  //   TargetContext: "readonly",
+  //   ComponentElRef: "readonly",
+  //   ComponentRef: "readonly",
+  //   ElRef: "readonly",
+  //   global: "readonly",
+  //   ForDataType: "readonly",
+  //   ComponentRoutes: "readonly",
     
-    // script setup
-    defineOptions: "readonly",
-    defineProps: "readonly",
-    defineEmits: "readonly",
-    defineExpose: "readonly",
-    withDefaults: "readonly",
+  //   // script setup
+  //   defineOptions: "readonly",
+  //   defineProps: "readonly",
+  //   defineEmits: "readonly",
+  //   defineExpose: "readonly",
+  //   withDefaults: "readonly",
     
-    document: "readonly",
-    localStorage: "readonly",
-    baiduMap: "readonly",
-    window: "readonly",
-    // 腾讯地图
-    TMap: "readonly",
-  },
-  extends: [
-    // 'standard',
-    // "plugin:vue/vue3-essential",
-    // "eslint:recommended",
-    // "prettier"
-  ],
-  parser: "vue-eslint-parser",
-  parserOptions: {
-    // ecmaVersion: 'latest',
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    jsxPragma: "React",
-    ecmaFeatures: {
-      modules: true,
-      jsx: true
-    },
-    //  Parsing error: This experimental syntax requires enabling one of the following parser plugin(s): "jsx", "flow", "typescript"
-    //  https://github.com/babel/babel/issues/14546
-    babelOptions : {
-      parserOpts: {
-        plugins: ["jsx"]
-      }
-    },
-    requireConfigFile: false,
-    parser: '@babel/eslint-parser'
-  },
-  plugins: [
-    'vue'
-  ],
+  //   document: "readonly",
+  //   localStorage: "readonly",
+  //   baiduMap: "readonly",
+  //   window: "readonly",
+  //   // 腾讯地图
+  //   TMap: "readonly",
+  // },
+  // extends: [
+  //   // 'standard',
+  //   // "plugin:vue/vue3-essential",
+  //   // "eslint:recommended",
+  //   // "prettier"
+  // ],
+  // parser: "vue-eslint-parser",
+  // parserOptions: {
+  //   // ecmaVersion: 'latest',
+  //   ecmaVersion: 2020,
+  //   sourceType: 'module',
+  //   jsxPragma: "React",
+  //   ecmaFeatures: {
+  //     modules: true,
+  //     jsx: true
+  //   },
+  //   //  Parsing error: This experimental syntax requires enabling one of the following parser plugin(s): "jsx", "flow", "typescript"
+  //   //  https://github.com/babel/babel/issues/14546
+  //   babelOptions : {
+  //     parserOpts: {
+  //       plugins: ["jsx"]
+  //     }
+  //   },
+  //   requireConfigFile: false,
+  //   parser: '@babel/eslint-parser'
+  // },
+  // plugins: [
+  //   'vue'
+  // ],
   // https://eslint.vuejs.org/rules/max-attributes-per-line.html
   // rules: {
   //   'import/no-unresolved': 'off',
