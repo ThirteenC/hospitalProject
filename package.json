@@ -9,6 +9,9 @@
     "build:staging": "rimraf dist && cross-env vite build --mode staging",
     "report": "rimraf dist && cross-env vite build",
     "vis": "set vis=true && vite build",
+    "lint-fix": "",
+    "lint-prettier": "",
+    "lint": "",
     "preview": "vite preview",
     "prepare": "husky install"
   },
