@@ -1,7 +1,8 @@
 <template>
   <div class="navbar">
-    <div>
+    <div class="left-menu">
       <Logo :collapse="false" />
+      <clock></clock>
     </div>
 
     <div class="right-menu">
@@ -18,6 +19,7 @@ import LangSelect from './components/LangSelect'
 import { emitter } from '@/utils/mitt'
 
 import Logo from '@/layout/components/sidebar/Logo'
+import clock from './components/clock'
 
 const router = useRouter()
 const appStore = useAppStore()
@@ -47,32 +49,14 @@ defineOptions({
   height: 60px;
   overflow: hidden;
   position: relative;
-  // background: #fff;
   background: #f0f2f5;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   display: flex;
   justify-content: space-between;
 
-  .hamburger-container {
-    line-height: 46px;
-    height: 100%;
-    float: left;
-    cursor: pointer;
-    transition: background 0.3s;
-    -webkit-tap-highlight-color: transparent;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.025);
-    }
-  }
-
-  .breadcrumb-container {
-    float: left;
-  }
-
-  .errLog-container {
-    display: inline-block;
-    vertical-align: top;
+  .left-menu {
+    display: flex;
+    align-items: center;
   }
 
   .right-menu {
@@ -83,12 +67,6 @@ defineOptions({
     color: #000000d9;
     justify-content: flex-end;
     padding-right: 30px;
-
-    .icons {
-      height: 100%;
-      line-height: 50px;
-      display: inline-block;
-    }
 
     &:focus {
       outline: none;
@@ -105,14 +83,6 @@ defineOptions({
 
     .p8 {
       padding: 0 8px;
-    }
-
-    .right-menu-item {
-      display: inline-block;
-      height: 100%;
-      font-size: 18px;
-      color: #5a5e66;
-      vertical-align: text-bottom;
     }
   }
 }
