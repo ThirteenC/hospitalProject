@@ -1,7 +1,7 @@
 
 export const getEnv = (envConf) => {
   const ret = {
-    VITE_PORT: 9527,
+    VITE_PORT: 9528,
     VITE_PUBLIC_PATH: '',
     VITE_PROXY_DOMAIN: '',
     VITE_PROXY_DOMAIN_REAL: '',

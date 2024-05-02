@@ -22,5 +22,14 @@ export default {
   },
   header: {
     home: '首页',
+    Birthday: '生日',
   },
+  table:{
+    add:"添加",
+    tableUnit:'仅显示最近 24 小时。',
+    tableUnitTile:'摄入输出记录历史',
+    tabTitle1:'饮水量',
+    tabTitle2:'排尿量',
+    tabTitle3:'粪便记录',
+  }
 }

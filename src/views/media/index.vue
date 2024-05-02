@@ -12,5 +12,6 @@ defineOptions( {
 
 <style lang="scss" scoped>
 .media-container {
+  background: #EAECF0;
 }
 </style>

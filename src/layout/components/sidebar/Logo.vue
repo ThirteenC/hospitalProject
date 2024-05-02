@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import logo from '@/assets/imgs/logo2.png'
+import logo from '@/assets/imgs/logo_top.png'
 import defaultSettings from '@/settings'
 const { title } = defaultSettings
 
@@ -43,9 +43,10 @@ defineOptions( {
 
 .sidebar-logo-container {
   position: relative;
-  width: 100px;
+  width: 158px;
   height: 60px;
   line-height: 60px;
+  margin-left: 10px;
   text-align: center;
   overflow: hidden;
   .sidebar-logo-link {
@@ -53,8 +54,8 @@ defineOptions( {
     width: 100%;
 
     .sidebar-logo {
-      width: 26px;
-      height: 26px;
+      width: 158px;
+      height: 53px;
       vertical-align: middle;
       margin-right: 12px;
       display: inline-block;

@@ -1,5 +1,9 @@
 <template>
   <div class="dashboard-editor-container">
+    <div>
+      <el-card> </el-card>
+    </div>
+
     {{ $t('header.home') }}
     <countdown></countdown>
   </div>

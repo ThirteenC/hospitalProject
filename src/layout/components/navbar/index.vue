@@ -50,7 +50,7 @@ defineOptions({
   overflow: hidden;
   position: relative;
   background: #f0f2f5;
-  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  // box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   display: flex;
   justify-content: space-between;
 
@@ -66,7 +66,7 @@ defineOptions({
     align-items: center;
     color: #000000d9;
     justify-content: flex-end;
-    padding-right: 30px;
+    padding-right: 10px;
 
     &:focus {
       outline: none;

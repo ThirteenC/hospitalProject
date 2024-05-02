@@ -4,6 +4,7 @@ import { ElMessage } from 'element-plus'
 import { getEnvs } from './envs'
 import cookies from '@/utils/cookies'
 import router from '@/router'
+import { getBaseUrl } from "@/utils/explain"
 import { useUserStore } from '@/store'
 
 import { TOKEN, WHITE_CODE_LIST, LOGIN_ERROR_CODE, GLOBAL_DATA } from '@/config/constant'
@@ -11,15 +12,9 @@ import { TOKEN, WHITE_CODE_LIST, LOGIN_ERROR_CODE, GLOBAL_DATA } from '@/config/
 class HttpRequest {
   // #baseUrl
   constructor() {
-    this.baseUrl = this.getBaseUrl()
+    this.baseUrl = getBaseUrl()
     this.withCredentials = false
     this.timeout = 60 * 60 * 24 * 1000
-  }
-
-  getBaseUrl() {
-    const { envStr } = getEnvs()
-    const baseUrlStr = envStr === 'dev' ? import.meta.env.VITE_PROXY_DOMAIN : GLOBAL_DATA[envStr].baseUrl
-    return baseUrlStr
   }
 
   getConfig() {
@@ -47,46 +42,46 @@ class HttpRequest {
 
   checkStatus( status ) {
     let errMessage = ''
-    switch ( status ) {
-      case 400:
-        errMessage = '错误请求'
-        break
-      case 401:
-        errMessage = '未授权，请重新登录'
-        break
-      case 403:
-        errMessage = '拒绝访问'
-        break
-      case 404:
-        errMessage = '请求错误,未找到该资源'
-        break
-      case 405:
-        errMessage = '请求方法未允许'
-        break
-      case 408:
-        errMessage = '请求超时'
-        break
-      case 500:
-        errMessage = '服务器端出错'
-        break
-      case 501:
-        errMessage = '网络未实现'
-        break
-      case 502:
-        errMessage = '网络错误'
-        break
-      case 503:
-        errMessage = '服务不可用'
-        break
-      case 504:
-        errMessage = '网络超时'
-        break
-      case 505:
-        errMessage = 'http版本不支持该请求'
-        break
-      default:
-        errMessage = '连接错误'
-    }
+    // switch ( status ) {
+    //   case 400:
+    //     errMessage = '错误请求'
+    //     break
+    //   case 401:
+    //     errMessage = '未授权，请重新登录'
+    //     break
+    //   case 403:
+    //     errMessage = '拒绝访问'
+    //     break
+    //   case 404:
+    //     errMessage = '请求错误,未找到该资源'
+    //     break
+    //   case 405:
+    //     errMessage = '请求方法未允许'
+    //     break
+    //   case 408:
+    //     errMessage = '请求超时'
+    //     break
+    //   case 500:
+    //     errMessage = '服务器端出错'
+    //     break
+    //   case 501:
+    //     errMessage = '网络未实现'
+    //     break
+    //   case 502:
+    //     errMessage = '网络错误'
+    //     break
+    //   case 503:
+    //     errMessage = '服务不可用'
+    //     break
+    //   case 504:
+    //     errMessage = '网络超时'
+    //     break
+    //   case 505:
+    //     errMessage = 'http版本不支持该请求'
+    //     break
+    //   default:
+    //     errMessage = '连接错误'
+    // }
     return errMessage
   }
 

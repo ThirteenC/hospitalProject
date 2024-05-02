@@ -22,5 +22,14 @@ export default {
   },
   header: {
     home: 'Home',
+    Birthday: 'Date Of Birth',
   },
+  table:{
+    add:"add",
+    tableUnit:'Only display the last 24 hours.',
+    tableUnitTile:'Intake Output Recording History',
+    tabTitle1:'Drink Intake',
+    tabTitle2:'Urine Output',
+    tabTitle3:'Stool Record',
+  }
 }

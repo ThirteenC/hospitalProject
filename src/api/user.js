@@ -9,10 +9,11 @@ export function UserList( data ) {
   } )
 }
 
+//登录
 export function login( data ) {
   return http.request( {
-    method : 'get',
-    url : '/login',
+    method : 'post',
+    url : '/api/webapp/BedsideTerminal/1/Login/Validation',
     data
   } )
 }

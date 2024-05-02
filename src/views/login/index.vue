@@ -2,21 +2,25 @@
   <div class="section-container login-container un-select">
     <div class="fixed-header">
       <NavBar />
+      <UserInfo></UserInfo>
     </div>
-    <div class="body fix-width">
-      <div class="top">
-        <div class="top-title">{{ $t('system.loginTitle') }}</div>
+    <el-card class="box-card">
+      <div class="body fix-width">
+        <div class="top">
+          <div class="top-title">{{ $t('system.loginTitle') }}</div>
+        </div>
+        <div class="main">
+          <login-pwd />
+          <p class="tips">{{ $t('system.loginTips') }}</p>
+        </div>
       </div>
-      <div class="main">
-        <login-pwd />
-        <p class="tips">{{ $t('system.loginTips') }}</p>
-      </div>
-    </div>
+    </el-card>
   </div>
 </template>
 
 <script setup>
 import { NavBar } from '@/layout/components'
+import { UserInfo } from '@/layout/components'
 import LoginPwd from './loginPwd.vue'
 
 defineOptions({
@@ -26,23 +30,28 @@ defineOptions({
 
 <style lang="scss" scoped>
 .fixed-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 9 !important;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // z-index: 9 !important;
   width: 100%;
   transition: width 0.28s;
 }
-
 .login-container {
   width: 100%;
   min-height: 100vh;
-  padding: 22vh 0 100px;
+  // padding: 22vh 0 10px;
   box-sizing: border-box;
   position: relative;
-  background: #fff;
+  background: #f0f2f5;
 }
-
+.box-card{
+  height:76vh;
+  margin: 10px;
+}
+.box{
+  height: 78vh;
+}
 .body {
   width: 380px;
   margin: 0 auto;

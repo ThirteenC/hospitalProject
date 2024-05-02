@@ -77,6 +77,17 @@ export const asyncRoutes = [
           noCache: true,
           affix: true
         }
+      },
+      {
+        path: 'tablePage',
+        name: 'tablePage',
+        component: () => import('@/views/tablePage/index.vue'),
+        meta: {
+          title: '表格页',
+          icon: 'dashboard',
+          noCache: true,
+          affix: true
+        }
       }
     ]
   },

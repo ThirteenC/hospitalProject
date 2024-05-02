@@ -65,6 +65,7 @@ defineOptions({
 .clock-content {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 .hours-minutes {
   font-size: 26px;

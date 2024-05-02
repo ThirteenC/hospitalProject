@@ -80,16 +80,16 @@ function loginHandle() {
     if (valid) {
       try {
         userStore.SET_TOKEN('test_token')
-        router.push('/')
-        // const params = {
-        //   username: form.userName,
-        //   password: form.password,
-        // }
-        // login().then(res => {
-        //   const { token } = res
-        //   userStore.SET_TOKEN(token)
-        //   router.push('/')
-        // })
+        // router.push('/')
+        const params = {
+          username: form.userName,
+          password: form.password,
+        }
+        login().then(res => {
+          const { token } = res
+          userStore.SET_TOKEN(token)
+          router.push('/')
+        })
       } catch (e) {
         console.warn(e)
       } finally {
