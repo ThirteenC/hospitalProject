@@ -50,5 +50,6 @@ const initApp = async () => {
   app.use(ElementPlus)
   app.use(useTable)
   app.mount('#app')
+  // register global utility filters
 }
 initApp()

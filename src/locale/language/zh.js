@@ -20,9 +20,15 @@ export default {
     userName: '用户名',
     password: '密码',
   },
-  header: {
+  homePage: {
     home: '首页',
     Birthday: '生日',
+    MedicalRecordNumber:'病历号',
+    AdmissionDate:'入院日期',
+    AttendingDoctor:"主治医生",
+    VisitingNurse:'接诊护士',
+    Alarm:'不吃不喝',
+    Alarm1:'跌倒注意事项',
   },
   table:{
     add:"添加",

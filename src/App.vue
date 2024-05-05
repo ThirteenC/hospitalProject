@@ -8,8 +8,8 @@
 <script>
 import { defineComponent, computed } from 'vue'
 import { ElConfigProvider } from 'element-plus'
-import zh from 'element-plus/lib/locale/lang/zh-cn'
-import en from 'element-plus/lib/locale/lang/en'
+import zhCn  from 'element-plus/es/locale/lang/zh-cn'
+import en from 'element-plus/es/locale/lang/en'
 import { useAppStore } from '@/store'
 // import { useI18n } from 'vue-i18n'
 
@@ -21,7 +21,7 @@ export default defineComponent( {
   setup() {
     // const { t } = useI18n()
     const appStore = useAppStore()
-    const locale = computed( () => ( appStore.lang === 'zh' ? zh : en ) )
+    const locale = computed( () => ( appStore.lang === 'zh' ? zhCn : en ) )
     const size = computed( () => appStore.size )
     return {
       locale,

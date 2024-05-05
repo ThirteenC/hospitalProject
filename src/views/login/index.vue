@@ -46,15 +46,16 @@ defineOptions({
   background: #f0f2f5;
 }
 .box-card{
-  height:76vh;
+  min-height: 84vh;
   margin: 10px;
-}
-.box{
-  height: 78vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .body {
+
   width: 380px;
-  margin: 0 auto;
+  margin:0 auto;
 }
 
 .top-title {

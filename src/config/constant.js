@@ -20,7 +20,7 @@ export const GLOBAL_DATA = {
 
 export const WHITE_CODE_LIST = [
   {
-    code: 200,
+    code: 0,
     msg: ''
   },
   {

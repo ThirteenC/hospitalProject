@@ -1,10 +1,10 @@
 export const axiosConfiguration = {
   // baseURL: 'https://hccmapi.kangzhiyunyi.cn', // 正式环境环境
-  baseURL: 'https://ehealth.landseed.com.tw/SmartWard/WebApi/api/webapp/', // 测试环境
+  baseURL: 'https://cd4b-125-227-252-163.ngrok-free.app/SmartWard/WebApi', // 测试环境
 
   // 即时通讯api
   // signalrUrl: "https://im.kangzhiyunyi.cn", // 正式环境环境
-  signalrUrl: "https://ehealth.landseed.com.tw/SmartWard/WebApi/api/webapp/", // 测试环境
+  signalrUrl: "https://cd4b-125-227-252-163.ngrok-free.app/SmartWard/WebApi", // 测试环境
 }
 export const getBaseUrl = function () {
   // let host = location.host;

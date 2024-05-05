@@ -1,12 +1,12 @@
 <template>
   <el-form ref="ruleForm" :model="form" :rules="rules" label-width="0" status-icon class="login-ruleForm">
-    <el-form-item prop="userName">
+    <el-form-item prop="account">
       <el-input
-        ref="userName"
-        v-model="form.userName"
+        ref="account"
+        v-model="form.account"
         class="h40"
-        name="userName"
-        :placeholder="$t('form.userName')"
+        name="account"
+        :placeholder="$t('form.account')"
         :clearable="true"
         tabindex="1"
         type="text"
@@ -57,11 +57,11 @@ const trigger = ['blur', 'change']
 const message = t('form.requiredTips')
 
 const form = reactive({
-  userName: 'admin',
-  password: '123',
+  account: 'smartward',
+  password: 'smartward',
 })
 const rules = {
-  userName: [{ required: true, message, trigger }],
+  account: [{ required: true, message, trigger }],
   password: [{ required: true, message, trigger }],
 }
 const loading = ref(false)
@@ -82,12 +82,13 @@ function loginHandle() {
         userStore.SET_TOKEN('test_token')
         // router.push('/')
         const params = {
-          username: form.userName,
+          account: form.account,
           password: form.password,
         }
-        login().then(res => {
-          const { token } = res
-          userStore.SET_TOKEN(token)
+        login(params).then(res => {
+          console.log(res.Data.Token,"res.Data.Token");
+          const { Token } = res.Data.Token
+          // userStore.SET_TOKEN(Token)
           router.push('/')
         })
       } catch (e) {

@@ -38,7 +38,7 @@ let initSignalR = () => {
   let deviceType = '2' // pc端
   // 创建连接对象
   this.signal = new signalR.HubConnectionBuilder()
-    .withUrl(`${url}/chat?nickName=${nickName}&Avatar=${avatar}&MsgSendCode=${msgCode}&deviceType=${deviceType}`, {
+    .withUrl(`${url}/chat?nickName=${nickName}&Avatar=${avatar}&MsgSendCode=${msgCode}&DeviceId=${deviceType}`, {
       skipNegotiations: true,
     })
     .withAutomaticReconnect()

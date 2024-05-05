@@ -20,9 +20,15 @@ export default {
     userName: 'userName',
     password: 'password',
   },
-  header: {
+  homePage: {
     home: 'Home',
     Birthday: 'Date Of Birth',
+    MedicalRecordNumber:'MRN',
+    AdmissionDate:"Admission Date",
+    AttendingDoctor:"Doctor In charge",
+    VisitingNurse:'Nurse In charge',
+    Alarm:'No food no drink',
+    Alarm1:'Fall Caution',
   },
   table:{
     add:"add",

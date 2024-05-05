@@ -27,7 +27,7 @@ const useUserStore = defineStore({
     async LOGIN_OUT() {
       try {
         const { code } = await logout(this.token)
-        if (code == 200) {
+        if (code == 0) {
           this.token = ''
           this.name = ''
           this.avatar = ''
