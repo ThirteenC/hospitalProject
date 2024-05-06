@@ -37,7 +37,7 @@ const height = ref('calc( 100vh - 84px)')
 watch(
   () => props.needTagsView,
   () => {
-    height.value = props.needTagsView ? 'calc( 100vh - 84px )' : 'calc( 100vh - 50px )'
+    height.value = props.needTagsView ? 'calc( 100vh - 84px )' : 'calc( 100vh - 60px )'
   },
   {
     immediate: true,
@@ -51,14 +51,14 @@ defineOptions({
 
 <style lang="scss" scoped>
 .app-main {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 60px);
   width: 100%;
   position: relative;
   overflow: hidden;
   background: #f0f2f5;
 }
 .fixed-header + .app-main {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 .hasTagsView {
   .app-main {

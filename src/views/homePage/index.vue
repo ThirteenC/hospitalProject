@@ -45,14 +45,18 @@
             </div>
           </div>
         </el-card>
-        <el-card class="custom-card" :body-style="{ padding: '0px' }" style="margin-top: 10px; border-radius: 10px; padding: 0px">
+        <el-card
+          class="custom-card"
+          :body-style="{ padding: '0px' }"
+          style="margin-top: 10px; border-radius: 10px; padding: 0px"
+        >
           <div class="functional_operation">
             <div v-for="(item, index) in operationList" :key="index" class="functional_operation_content">
               <el-badge
                 v-if="item.notice_number > 1"
                 :show-zero="false"
                 :value="item.notice_number"
-                :offset="[0, 10]"
+                :offset="[-6, 14]"
                 :max="99"
               >
                 <img :src="item.img" alt="" class="functional_operation_content_img" />
@@ -70,13 +74,23 @@
       </div>
       <div class="basic_information_right">
         <div class="patients_seeking_help">
-          <div v-for="(item, index) in patientsHelpList" :key="index" class="patients_seeking_help_content">
+          <div
+            v-for="(item, index) in patientsHelpList"
+            :key="index"
+            :class="item.status == 1 ? 'patients_seeking_help_content' : 'patients_seeking_help_content_notice'"
+          >
+            <img
+              src="../../assets/imgs/patients_help.png"
+              v-if="item.status == 0"
+              alt=""
+              class="patients_seeking_help_content_notice_icon"
+            />
             <img :src="item.img" alt="" class="patients_seeking_help_content_img" />
             <div class="patients_seeking_help_content_title">{{ getCurrentLanguageName(item) }}</div>
           </div>
         </div>
         <div>
-          <el-card style="border-radius: 10px; margin: 10px">
+          <el-card style="border-radius: 10px; margin-left: 10px">
             <div v-for="(item, index) in to_do_items" :key="index" class="">
               <div class="to_do_items_title">
                 <span>{{ item.title }}</span>
@@ -181,36 +195,43 @@ const patientsHelpList = ref([
     img: '../../src/assets/imgs/patients_help.png',
     zh_name: '疼痛辅助',
     us_name: 'Pain Assist',
+    status: '1',
   },
   {
     img: '../../src/assets/imgs/patients_help1.png',
     zh_name: '滴水岛',
     us_name: 'Drip lssue',
+    status: '0',
   },
   {
     img: '../../src/assets/imgs/patients_help2.png',
     zh_name: '请求水',
     us_name: 'Request Water',
+    status: '1',
   },
   {
     img: '../../src/assets/imgs/patients_help3.png',
     zh_name: '如厕',
     us_name: 'Toileting',
+    status: '1',
   },
   {
     img: '../../src/assets/imgs/patients_help4.png',
     zh_name: '铺床',
     us_name: 'Bed Making',
+    status: '1',
   },
   {
     img: '../../src/assets/imgs/patients_help5.png',
     zh_name: '家政',
     us_name: 'Housekeeping',
+    status: '1',
   },
   {
     img: '../../src/assets/imgs/patients_help6.png',
     zh_name: '客服服务',
     us_name: 'Customer Service',
+    status: '1',
   },
 ])
 const to_do_items = ref([
@@ -397,6 +418,48 @@ function getCurrentLanguageName(item) {
       .patients_seeking_help {
         display: flex;
         flex-wrap: wrap;
+
+        .patients_seeking_help_content_notice {
+          background-color: #dedede;
+          width: 154px;
+          height: 96px;
+          background: #dedede;
+          border: 1px solid #dedede;
+          border-radius: 10px;
+          margin-left: 10px;
+          text-align: center;
+          margin-bottom: 10px;
+          position: relative;
+          .patients_seeking_help_content_notice_icon {
+            position: absolute;
+            right: 0px;
+            top: -10px;
+            width: 32px;
+            height: 32px;
+            opacity: 1;
+          }
+          .patients_seeking_help_content_img {
+            width: 52px;
+            height: 52px;
+            margin-top: 10px;
+            opacity: 0.4;
+          }
+          .patients_seeking_help_content_title {
+            color: #222222;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 600;
+            opacity: 0.4;
+          }
+        }
+        .patients_seeking_help_content_notice::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: #fff;
+          z-index: -1;
+        }
         .patients_seeking_help_content {
           width: 154px;
           height: 96px;
@@ -406,6 +469,7 @@ function getCurrentLanguageName(item) {
           margin-left: 10px;
           text-align: center;
           margin-bottom: 10px;
+
           .patients_seeking_help_content_img {
             width: 52px;
             height: 52px;
@@ -419,6 +483,7 @@ function getCurrentLanguageName(item) {
           }
         }
       }
+
       .to_do_items_title {
         font-size: 18px;
         color: #222222;

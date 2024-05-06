@@ -88,6 +88,17 @@ export const asyncRoutes = [
           noCache: true,
           affix: true
         }
+      },
+      {
+        path: 'addForm',
+        name: 'addForm',
+        component: () => import('@/views/tablePage/components/addForm.vue'),
+        meta: {
+          title: '表格页-新增',
+          icon: 'dashboard',
+          noCache: true,
+          affix: true
+        }
       }
     ]
   },

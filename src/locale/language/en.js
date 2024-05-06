@@ -11,6 +11,7 @@ export default {
     },
     loginTitle: 'Healthcare team Login',
     login: 'Login',
+    Birthday:"Date Of Birth",
     loginTips: 'Or Pioce your NFC card noar the device',
     confirm: 'Confirm',
     cancel: 'Cancel',
@@ -37,5 +38,13 @@ export default {
     tabTitle1:'Drink Intake',
     tabTitle2:'Urine Output',
     tabTitle3:'Stool Record',
+    addFormTitle:'Urine Record',
+    addFormHistory:'Review History',
+    addFormConfirm:'Confirm',
+    addFormCancel:'Cancel',
+    addFormLabel1:"Step1 Record the drinking time",
+    addFormLabel2:"Step2 Choose the type of urine",
+    addFormLabel3:"Step3 choose the consistency of urine",
+    addFormLabel4:"Step4 Insert the amount",
   }
 }

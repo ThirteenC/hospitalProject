@@ -9,11 +9,13 @@ export default {
       tips: '是否继续停留此页面',
       continue: '继续',
     },
+    Birthday:"出生日期",
     loginTitle: '医疗团队登录',
     login: '登录',
     loginTips: '或者把你的NFC卡放在设备上',
     confirm: '确定',
     cancel: '取消',
+    
   },
   form: {
     requiredTips: '请输入',
@@ -37,5 +39,13 @@ export default {
     tabTitle1:'饮水量',
     tabTitle2:'排尿量',
     tabTitle3:'粪便记录',
+    addFormTitle:'尿液记录',
+    addFormHistory:'查看历史记录',
+    addFormConfirm:'确认',
+    addFormCancel:'取消',
+    addFormLabel1:"步骤1 记录饮酒时间",
+    addFormLabel2:"步骤2 选择尿液的种类",
+    addFormLabel3:"步骤3 选择尿液的稠度",
+    addFormLabel4:"步骤4 输入容量",
   }
 }

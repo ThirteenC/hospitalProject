@@ -33,7 +33,7 @@ export default defineComponent({
         } else {
           currentIndex = 0
         }
-        noticeContent.value.innerHTML = content.slice(currentIndex, currentIndex + 10)
+        noticeContent.value.innerHTML = String(content.slice(currentIndex, currentIndex + 10))
         setTimeout(marqueeRun, speed)
       }
 

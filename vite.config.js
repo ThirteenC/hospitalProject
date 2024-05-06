@@ -20,6 +20,13 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         '@': resolve('src')
       },
+      css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: `@use "~/styles/element/index.scss" as *;`,
+          },
+        },
+      },
       extensions: ['.js', '.json', '.ts', '.vue']
     },
 

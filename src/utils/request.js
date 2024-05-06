@@ -134,26 +134,31 @@ class HttpRequest {
           if (Code == 0) {
             return result
           } else {
+            ElMessage({
+              message: Data.msg || 'Error',
+              type: 'error',
+              duration: 3 * 1000
+            })
+            return Promise.reject(new Error(Data.msg || 'Error'))
+            // const isErrorToken = LOGIN_ERROR_CODE.find(item => item.code == Code)
+            // const isWhiteCode = WHITE_CODE_LIST.find(item => item.code == Code)
 
-            const isErrorToken = LOGIN_ERROR_CODE.find(item => item.code == Code)
-            const isWhiteCode = WHITE_CODE_LIST.find(item => item.code == Code)
+            // const userStore = useUserStore()
 
-            const userStore = useUserStore()
-
-            if (isErrorToken) {
-              userStore.LOGIN_OUT()
-              router.push('/login')
-              window.location.reload()
-            } else if (!isWhiteCode) {
-              ElMessage({
-                message: Data.msg || 'Error',
-                type: 'error',
-                duration: 3 * 1000
-              })
-              return Promise.reject(new Error(Data.msg || 'Error'))
-            } else {
-              return result
-            }
+            // if (isErrorToken) {
+            //   userStore.LOGIN_OUT()
+            //   router.push('/login')
+            //   window.location.reload()
+            // } else if (!isWhiteCode) {
+            //   ElMessage({
+            //     message: Data.msg || 'Error',
+            //     type: 'error',
+            //     duration: 3 * 1000
+            //   })
+            //   return Promise.reject(new Error(Data.msg || 'Error'))
+            // } else {
+            //   return result
+            // }
           }
 
         }

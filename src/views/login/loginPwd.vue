@@ -33,7 +33,7 @@
     </el-form-item>
 
     <el-form-item style="margin-bottom: 0">
-      <el-button class="h40" :loading="loading" type="primary" style="width: 100%" @click.prevent="loginHandle">
+      <el-button class="h40" :loading="loading" type="success" style="width: 100%" @click.prevent="loginHandle">
         {{ $t('system.login') }}
       </el-button>
     </el-form-item>
@@ -79,7 +79,7 @@ function loginHandle() {
   ruleForm.value.validate(async valid => {
     if (valid) {
       try {
-        userStore.SET_TOKEN('test_token')
+        // userStore.SET_TOKEN('test_token')
         // router.push('/')
         const params = {
           account: form.account,
@@ -87,8 +87,8 @@ function loginHandle() {
         }
         login(params).then(res => {
           console.log(res.Data.Token,"res.Data.Token");
-          const { Token } = res.Data.Token
-          // userStore.SET_TOKEN(Token)
+          const { Token } = res.Data
+          userStore.SET_TOKEN(Token)
           router.push('/')
         })
       } catch (e) {

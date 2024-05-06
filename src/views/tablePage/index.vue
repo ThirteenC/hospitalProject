@@ -26,13 +26,21 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount } from 'vue'
+import { ref, } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import countdown from '@/components/countdown/index.vue'
 import tablePage from './components/tablePage.vue'
+const router = useRouter()
 function handleClick(tab, event) {
-  console.log(tab, event)
+  // console.log(tab, event)
 }
 const activeName = ref('first')
+function handleAdd() {
+  router.push({
+    path: 'addForm',
+    query: {}
+  })
+}
 </script>
 
 <style lang="scss" scoped>

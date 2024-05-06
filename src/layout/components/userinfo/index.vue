@@ -8,7 +8,7 @@
         <div class="user_name">DHIRUGNANA KAMBANTHAN A/P S. SUMRA</div>
       </div>
       <div class="user_age">
-        <div class="user_age_title">{{$t('header.Birthday')}}</div>
+        <div class="user_age_title">{{ $t('system.Birthday')}}</div>
         <div class="user_age_number">29/10/1988</div>
       </div>
     </div>

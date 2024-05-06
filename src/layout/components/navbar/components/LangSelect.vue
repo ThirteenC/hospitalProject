@@ -13,7 +13,7 @@
       <template #footer>
         <div class="dialog-footer">
           <el-button @click="dialogVisible = false">{{ $t('system.cancel') }}</el-button>
-          <el-button type="primary" @click="onLangChange"> {{ $t('system.confirm') }} </el-button>
+          <el-button type="success" @click="onLangChange"> {{ $t('system.confirm') }} </el-button>
         </div>
       </template>
     </el-dialog>

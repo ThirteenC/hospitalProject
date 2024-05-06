@@ -4,6 +4,7 @@ import router from './router'
 import { registerStore } from '@/store'
 import { useSvgIcon } from './icons'
 import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import './permission'
 
 import 'animate.css'
