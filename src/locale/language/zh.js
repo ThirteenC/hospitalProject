@@ -25,12 +25,12 @@ export default {
   homePage: {
     home: '首页',
     Birthday: '生日',
-    MedicalRecordNumber:'病历号',
-    AdmissionDate:'入院日期',
-    AttendingDoctor:"主治医生",
-    VisitingNurse:'接诊护士',
-    Alarm:'不吃不喝',
-    Alarm1:'跌倒注意事项',
+    MedicalRecordNumber: '病历号',
+    AdmissionDate: '入院日期',
+    AttendingDoctor: "主治医生",
+    VisitingNurse: '接诊护士',
+    Alarm: '不吃不喝',
+    Alarm1: '跌倒注意事项',
   },
   table:{
     add:"添加",
@@ -47,5 +47,10 @@ export default {
     addFormLabel2:"步骤2 选择尿液的种类",
     addFormLabel3:"步骤3 选择尿液的稠度",
     addFormLabel4:"步骤4 输入容量",
+  },
+  medicationEducation: {
+    title: "药品教育",
+    instruction: "用法说明",
+    medicationInformation: "药品信息"
   }
 }

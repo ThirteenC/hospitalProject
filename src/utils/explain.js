@@ -3,8 +3,7 @@ export const axiosConfiguration = {
   baseURL: 'https://cd4b-125-227-252-163.ngrok-free.app/SmartWard/WebApi', // 测试环境
 
   // 即时通讯api
-  // signalrUrl: "https://im.kangzhiyunyi.cn", // 正式环境环境
-  signalrUrl: "https://cd4b-125-227-252-163.ngrok-free.app/SmartWard/WebApi", // 测试环境
+  signalrUrl: "https://cd4b-125-227-252-163.ngrok-free.app/SmartWard/SignalRWebApp/signalrhub", // 测试环境
 }
 export const getBaseUrl = function () {
   // let host = location.host;

@@ -24,12 +24,12 @@ export default {
   homePage: {
     home: 'Home',
     Birthday: 'Date Of Birth',
-    MedicalRecordNumber:'MRN',
-    AdmissionDate:"Admission Date",
-    AttendingDoctor:"Doctor In charge",
-    VisitingNurse:'Nurse In charge',
-    Alarm:'No food no drink',
-    Alarm1:'Fall Caution',
+    MedicalRecordNumber: 'MRN',
+    AdmissionDate: "Admission Date",
+    AttendingDoctor: "Doctor In charge",
+    VisitingNurse: 'Nurse In charge',
+    Alarm: 'No food no drink',
+    Alarm1: 'Fall Caution',
   },
   table:{
     add:"add",
@@ -46,5 +46,10 @@ export default {
     addFormLabel2:"Step2 Choose the type of urine",
     addFormLabel3:"Step3 choose the consistency of urine",
     addFormLabel4:"Step4 Insert the amount",
+  },
+  medicationEducation: {
+    title: "Medication Education",
+    instruction: "instruction",
+    medicationInformation: "Medication Information"
   }
 }

@@ -90,11 +90,19 @@ export const asyncRoutes = [
         }
       },
       {
+<<<<<<< HEAD
         path: 'addForm',
         name: 'addForm',
         component: () => import('@/views/tablePage/components/addForm.vue'),
         meta: {
           title: '表格页-新增',
+=======
+        path: 'medicationEducation',
+        name: 'medicationEducation',
+        component: () => import('@/views/medicationEducation/index.vue'),
+        meta: {
+          title: '药品教育',
+>>>>>>> eb94696f2d462aabf2f521b7d10365eb2e7a21cb
           icon: 'dashboard',
           noCache: true,
           affix: true
