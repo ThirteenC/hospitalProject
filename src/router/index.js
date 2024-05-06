@@ -88,6 +88,17 @@ export const asyncRoutes = [
           noCache: true,
           affix: true
         }
+      },
+      {
+        path: 'medicationEducation',
+        name: 'medicationEducation',
+        component: () => import('@/views/medicationEducation/index.vue'),
+        meta: {
+          title: '药品教育',
+          icon: 'dashboard',
+          noCache: true,
+          affix: true
+        }
       }
     ]
   },

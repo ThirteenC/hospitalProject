@@ -23,19 +23,24 @@ export default {
   homePage: {
     home: '首页',
     Birthday: '生日',
-    MedicalRecordNumber:'病历号',
-    AdmissionDate:'入院日期',
-    AttendingDoctor:"主治医生",
-    VisitingNurse:'接诊护士',
-    Alarm:'不吃不喝',
-    Alarm1:'跌倒注意事项',
+    MedicalRecordNumber: '病历号',
+    AdmissionDate: '入院日期',
+    AttendingDoctor: "主治医生",
+    VisitingNurse: '接诊护士',
+    Alarm: '不吃不喝',
+    Alarm1: '跌倒注意事项',
   },
-  table:{
-    add:"添加",
-    tableUnit:'仅显示最近 24 小时。',
-    tableUnitTile:'摄入输出记录历史',
-    tabTitle1:'饮水量',
-    tabTitle2:'排尿量',
-    tabTitle3:'粪便记录',
+  table: {
+    add: "添加",
+    tableUnit: '仅显示最近 24 小时。',
+    tableUnitTile: '摄入输出记录历史',
+    tabTitle1: '饮水量',
+    tabTitle2: '排尿量',
+    tabTitle3: '粪便记录',
+  },
+  medicationEducation: {
+    title: "药品教育",
+    instruction: "用法说明",
+    medicationInformation: "药品信息"
   }
 }

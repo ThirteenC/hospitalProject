@@ -23,19 +23,24 @@ export default {
   homePage: {
     home: 'Home',
     Birthday: 'Date Of Birth',
-    MedicalRecordNumber:'MRN',
-    AdmissionDate:"Admission Date",
-    AttendingDoctor:"Doctor In charge",
-    VisitingNurse:'Nurse In charge',
-    Alarm:'No food no drink',
-    Alarm1:'Fall Caution',
+    MedicalRecordNumber: 'MRN',
+    AdmissionDate: "Admission Date",
+    AttendingDoctor: "Doctor In charge",
+    VisitingNurse: 'Nurse In charge',
+    Alarm: 'No food no drink',
+    Alarm1: 'Fall Caution',
   },
-  table:{
-    add:"add",
-    tableUnit:'Only display the last 24 hours.',
-    tableUnitTile:'Intake Output Recording History',
-    tabTitle1:'Drink Intake',
-    tabTitle2:'Urine Output',
-    tabTitle3:'Stool Record',
+  table: {
+    add: "add",
+    tableUnit: 'Only display the last 24 hours.',
+    tableUnitTile: 'Intake Output Recording History',
+    tabTitle1: 'Drink Intake',
+    tabTitle2: 'Urine Output',
+    tabTitle3: 'Stool Record',
+  },
+  medicationEducation: {
+    title: "Medication Education",
+    instruction: "instruction",
+    medicationInformation: "Medication Information"
   }
 }
