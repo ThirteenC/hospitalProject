@@ -16,6 +16,8 @@ export default {
     confirm: 'Confirm',
     cancel: 'Cancel',
     empty: "no data",
+    reconnectTips: "Reconnecting...",
+    reconnectionSuccessful: "reconnection successful"
   },
   form: {
     requiredTips: 'please enter',

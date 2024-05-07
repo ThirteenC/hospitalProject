@@ -16,6 +16,8 @@ export default {
     confirm: '确定',
     cancel: '取消',
     empty: "暂无数据",
+    reconnectTips: "连接已断开，重连中...",
+    reconnectionSuccessful: "重新连接成功"
   },
   form: {
     requiredTips: '请输入',
