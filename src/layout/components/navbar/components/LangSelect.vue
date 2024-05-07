@@ -43,6 +43,8 @@ const onLangChange = () => {
   locale.value = langSelect.value
   dialogVisible.value = false
   ElMessage.success(t('system.langSetting.langChangeTips'))
+  // 重载页面以刷新接口
+  location.reload()
 }
 
 defineOptions({

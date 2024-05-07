@@ -108,10 +108,11 @@
 </template>
 
 <script setup>
+import { getGlobal } from '@/utils/index.js'
 import countdown from '@/components/countdown/index.vue'
 import Notice from '@/components/notice/index.vue'
 import { useAppStore } from '@/store'
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 const content = ref('跑马灯效果,跑马灯效果,跑马灯效果')
 const operationList = ref([
   {
@@ -282,6 +283,14 @@ function getCurrentLanguageName(item) {
     return item.us_name
   }
 }
+
+onMounted(() => {
+  let signal = getGlobal('$signal')
+  signal.on('Receive', res => {
+    // 收到消息，可在此执行刷新页面的操作
+    console.log('refresh')
+  })
+})
 </script>
 
 <style lang="scss" scoped>

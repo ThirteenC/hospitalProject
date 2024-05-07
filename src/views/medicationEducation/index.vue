@@ -1,20 +1,21 @@
 <template>
   <div class="dashboard-editor-container">
-    <el-card>
+    <el-card v-loading="loading">
       <p class="title">
         {{ $t('medicationEducation.title') }}
       </p>
-      <ul class="medication-wall">
-        <li v-for="item in list" :key="item" class="medication-card">
-          <p class="name">xxxxx</p>
+      <ul class="medication-wall" v-if="list.length > 0">
+        <li v-for="(item, index) in list" :key="index" class="medication-card">
+          <p class="name">{{ item.Name }}</p>
           <div class="info">
             <p class="desc">{{ $t('medicationEducation.instruction') }}</p>
-            <p v-for="i in 3" :key="i">xxxx</p>
+            <p v-html="item.Instruction"></p>
             <p class="desc">{{ $t('medicationEducation.medicationInformation') }}</p>
-            <p>xxxxx</p>
+            <p v-html="item.Information"></p>
           </div>
         </li>
       </ul>
+      <el-empty v-else :description="$t('system.empty')" />
     </el-card>
 
     <countdown></countdown>
@@ -22,10 +23,33 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount } from 'vue'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+import { medicationEducationList } from '@/api/medication'
 import countdown from '@/components/countdown/index.vue'
 
-let list = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+let list = ref([])
+let loading = ref(false)
+const route = useRoute()
+const { BedCode, PatientRecoreRowId } = route.query
+
+let params = {
+  BedCode,
+  PatientRecoreRowId,
+}
+
+let getList = params => {
+  loading.value = true
+  medicationEducationList(params)
+    .then(res => {
+      list.value = res.MedicationList
+    })
+    .finally(err => {
+      loading.value = false
+    })
+}
+
+getList(params)
 </script>
 
 <style lang="scss" scoped>

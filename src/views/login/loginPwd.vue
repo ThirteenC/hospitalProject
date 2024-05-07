@@ -79,15 +79,13 @@ function loginHandle() {
   ruleForm.value.validate(async valid => {
     if (valid) {
       try {
-        // userStore.SET_TOKEN('test_token')
-        // router.push('/')
         const params = {
           account: form.account,
           password: form.password,
         }
         login(params).then(res => {
-          console.log(res.Data.Token,"res.Data.Token");
-          const { Token } = res.Data
+          console.log(res.Token, 'Token')
+          const { Token } = res
           userStore.SET_TOKEN(Token)
           router.push('/')
         })
