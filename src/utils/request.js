@@ -130,16 +130,18 @@ class HttpRequest {
           return result
         } else {
           console.log('response success:', res)
-          const { Code, Data } = result
+          const { Code, Data,Message } = result
           if (Code == 0) {
             return result
           } else {
             ElMessage({
-              message: Data.msg || 'Error',
+              showClose: true,
+              grouping:true,
+              message: Message || 'Error',
               type: 'error',
               duration: 3 * 1000
             })
-            return Promise.reject(new Error(Data.msg || 'Error'))
+            return Promise.reject(new Error(Message || 'Error'))
             // const isErrorToken = LOGIN_ERROR_CODE.find(item => item.code == Code)
             // const isWhiteCode = WHITE_CODE_LIST.find(item => item.code == Code)
 
