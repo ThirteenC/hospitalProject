@@ -97,10 +97,7 @@ class HttpRequest {
           })
           return Promise.reject(new Error('请检查您的网络是否正常'))
         }
-        const token = cookies.get(TOKEN)
-        if (token) {
-          config.headers.Authorization = token
-        }
+
         //获取当前国际化的语言
         const locale = cookies.get('lang')
         console.log(locale, "语言")
@@ -108,6 +105,12 @@ class HttpRequest {
         config.data = {
           Language: locale == 'zh' ? 'zh-CN' : 'en-US',
           Data: config.data
+        }
+
+        const token = cookies.get(TOKEN)
+        if (token) {
+          // config.headers.Authorization = token
+          config.data.Token = token
         }
 
         return config
@@ -130,13 +133,13 @@ class HttpRequest {
           return result
         } else {
           console.log('response success:', res)
-          const { Code, Data,Message } = result
+          const { Code, Data, Message } = result
           if (Code == 0) {
-            return result
+            return Data
           } else {
             ElMessage({
               showClose: true,
-              grouping:true,
+              grouping: true,
               message: Message || 'Error',
               type: 'error',
               duration: 3 * 1000
